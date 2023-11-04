@@ -1,6 +1,6 @@
 class Main {
     // static is a method that belongs to a class rather than an instance of a class
-    static int findElement(int array[], int length, int key) {
+    static int linearSearch(int array[], int length, int key) {
         for (int index = 0; index < length; index++) {
             if (array[index] == key)
                 return index;
@@ -10,11 +10,10 @@ class Main {
 
     // camel case naming convention is consistent with most in-built methods
     public static void main(String args[]) {
-        int array[] = {12, 34, 10, 6, 40};
+        int array[] = {10, 20, 30, 40, 50, 60, 70, 80, 90};
         int length = array.length;
-        int key = 40;
-        // linear search
-        int position = findElement(array, length, key);
+        int key = 70;
+        int position = linearSearch(array, length, key);
 
         if (position == -1)
             System.out.println("Element not found");
